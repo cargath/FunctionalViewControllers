@@ -23,12 +23,12 @@ let artists : [Artist] = [
     Artist(name: "Simeon Ten Holt", additionalInformation: "Bla bla", albums: [])
 ]
 
-let chooseArtist: ViewController<[Artist], Artist> = TableViewController.tableViewController { cell, artist in
+let chooseArtist: Screen<[Artist], Artist> = TableViewController.tableViewController { cell, artist in
     cell.textLabel!.text = artist.name
     return cell
 }
 
-let chooseAlbum: ViewController<[Album], Album> = TableViewController.tableViewController { cell, album in
+let chooseAlbum: Screen<[Album], Album> = TableViewController.tableViewController { cell, album in
     cell.textLabel?.text = album.name
     return cell
 }
@@ -55,7 +55,7 @@ class ColorViewController: UIViewController {
 
 enum Color {
     case Silver(string: String)
-    case SpaceGrey(int: Int)
+    case SpaceGrey(artists: [Artist])
     case Gold
     case RoseGold
 }
@@ -82,17 +82,17 @@ extension Color: CustomStringConvertible {
     }
 }
 
-let colors: [Color] = [.Silver(string: "Foobar"), .SpaceGrey(int: 42), .Gold, .RoseGold]
+let colors: [Color] = [.Silver(string: "Foobar"), .SpaceGrey(artists: artists), .Gold, .RoseGold]
 
-let chooseColor: ViewController<[Color], Color> = TableViewController.tableViewController { cell, color in
+let chooseColor: Screen<[Color], Color> = TableViewController.tableViewController { cell, color in
     cell.textLabel?.text = color.description
     return cell
 }
 
-let color2Other: ViewController<Color, String> = ViewController { (color: Color, callback: String -> Void) -> UIViewController in
+let color2Other: Screen<Color, String> = Screen { (color: Color, callback: String -> Void) -> UIViewController in
     switch color {
         case let .Silver(string): return chooseColor.run(colors)
-        case let .SpaceGrey(int): return chooseArtist.run(artists)
+        case let .SpaceGrey(artists): return chooseArtist.run(artists)
         case .Gold: return ColorViewController(color: color)
         case .RoseGold: return ColorViewController(color: color)
     }
@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
-        window?.rootViewController = NavigationController(rootViewController: chooseColor)
+        window?.rootViewController = Router(rootViewController: chooseColor)
             //.map({ $0.albums })
             //.bind(chooseAlbum)
             //.run(artists, finish: { print("Selected \($0.name)")})

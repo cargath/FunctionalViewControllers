@@ -16,7 +16,7 @@ public class Box<T> {
 class TableViewController: UITableViewController {
 
     var items: NSArray = []
-    var callback: AnyObject -> () = { _ in () }
+    var callback: AnyObject -> Void = { _ in }
     var configureCell: (UITableViewCell, AnyObject) -> UITableViewCell = { $0.0 }
 
     override func viewDidLoad() {
@@ -40,10 +40,12 @@ class TableViewController: UITableViewController {
 
 extension TableViewController {
 
-    static func tableViewController<A>(render: (UITableViewCell, A) -> UITableViewCell) -> ViewController<[A], A> {
-        return ViewController<[A], A>(create: { (items: [A], callback: A -> ()) -> UIViewController in
+    static func tableViewController<A>(render: (UITableViewCell, A) -> UITableViewCell) -> Screen<[A], A> {
+        return Screen<[A], A>(create: { (items: [A], callback: A -> Void) -> UIViewController in
             let myTableViewController = TableViewController()
-            myTableViewController.items = items.map { Box($0) }
+            myTableViewController.items = items.map { item in
+                Box(item)
+            }
             myTableViewController.configureCell = { cell, obj in
                 if let boxed = obj as? Box<A> {
                     return render(cell, boxed.unbox)

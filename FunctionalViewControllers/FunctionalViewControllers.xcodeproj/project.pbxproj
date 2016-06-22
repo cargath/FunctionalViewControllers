@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		355026AA1D1B3F5A008458F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026A91D1B3F5A008458F8 /* TableViewController.swift */; };
-		35679ABB1D1B2A620032D3E7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35679ABA1D1B2A620032D3E7 /* Library.swift */; };
+		355026AC1D1B4F50008458F8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026AB1D1B4F50008458F8 /* Screen.swift */; };
+		355026AE1D1B4F57008458F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026AD1D1B4F57008458F8 /* Router.swift */; };
 		35BA41FD1D18801200548563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA41FC1D18801200548563 /* AppDelegate.swift */; };
 		35BA42041D18801200548563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BA42031D18801200548563 /* Assets.xcassets */; };
 		35BA42071D18801200548563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BA42051D18801200548563 /* LaunchScreen.storyboard */; };
@@ -29,7 +30,8 @@
 
 /* Begin PBXFileReference section */
 		355026A91D1B3F5A008458F8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		35679ABA1D1B2A620032D3E7 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		355026AB1D1B4F50008458F8 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		355026AD1D1B4F57008458F8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		35BA41F91D18801200548563 /* FunctionalViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BA41FC1D18801200548563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35BA42031D18801200548563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +86,8 @@
 				35BA42031D18801200548563 /* Assets.xcassets */,
 				35BA42051D18801200548563 /* LaunchScreen.storyboard */,
 				35BA42081D18801200548563 /* Info.plist */,
-				35679ABA1D1B2A620032D3E7 /* Library.swift */,
+				355026AB1D1B4F50008458F8 /* Screen.swift */,
+				355026AD1D1B4F57008458F8 /* Router.swift */,
 				355026A91D1B3F5A008458F8 /* TableViewController.swift */,
 				35BA41FC1D18801200548563 /* AppDelegate.swift */,
 				35BA421C1D18803000548563 /* Result.swift */,
@@ -203,10 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BA421D1D18803000548563 /* Result.swift in Sources */,
-				35679ABB1D1B2A620032D3E7 /* Library.swift in Sources */,
 				35BA41FD1D18801200548563 /* AppDelegate.swift in Sources */,
+				355026AE1D1B4F57008458F8 /* Router.swift in Sources */,
 				355026AA1D1B3F5A008458F8 /* TableViewController.swift in Sources */,
 				35BA421F1D18803800548563 /* Promise.swift in Sources */,
+				355026AC1D1B4F50008458F8 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

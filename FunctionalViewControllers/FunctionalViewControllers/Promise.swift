@@ -9,8 +9,8 @@
 public struct Promise<T, E> {
 
     public typealias ResultType = Result<T, E>
-    public typealias Completion = ResultType -> ()
-    public typealias AsyncOperation = Completion -> ()
+    public typealias Completion = ResultType -> Void
+    public typealias AsyncOperation = Completion -> Void
 
     private let operation: AsyncOperation
 
