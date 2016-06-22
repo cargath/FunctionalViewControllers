@@ -8,11 +8,6 @@
 
 import UIKit
 
-public class Box<T> {
-    public let unbox: T
-    public init(_ value: T) { self.unbox = value }
-}
-
 struct ViewController<A, B> {
     let create: (A, B -> Void) -> UIViewController
 }
@@ -27,7 +22,7 @@ extension ViewController {
         }
     }
 
-    func run(initialValue: A, finish: B -> ()) -> UIViewController {
+    func run(initialValue: A, finish: B -> Void = { print($0) }) -> UIViewController {
         return create(initialValue, finish)
     }
 
@@ -68,7 +63,7 @@ extension NavigationController {
         }
     }
 
-    func run(initialValue: A, finish: B -> ()) -> UINavigationController {
+    func run(initialValue: A, finish: B -> Void = { print($0) }) -> UINavigationController {
         return create(initialValue) { b, _ in
             finish(b)
         }

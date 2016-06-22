@@ -8,89 +8,6 @@
 
 import UIKit
 
-func tableViewController<A>(render: (UITableViewCell, A) -> UITableViewCell) -> ViewController<[A], A> {
-
-    return ViewController(create: { (items: [A], callback: A -> ()) -> UIViewController in
-        let myTableViewController = MyViewController()
-        myTableViewController.items = items.map { Box($0) }
-        myTableViewController.configureCell = { cell, obj in
-            if let boxed = obj as? Box<A> {
-                return render(cell, boxed.unbox)
-            }
-            return cell
-        }
-        myTableViewController.callback = { x in
-            if let boxed = x as? Box<A> {
-                callback(boxed.unbox)
-            }
-        }
-        return myTableViewController
-    })
-
-}
-
-class MyViewController: UITableViewController {
-
-    var items: NSArray = []
-    var callback: AnyObject -> () = { _ in () }
-    var configureCell: (UITableViewCell, AnyObject) -> UITableViewCell = { $0.0 }
-
-    override func viewDidLoad() {
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return configureCell(tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath), items[indexPath.row])
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        callback(items[indexPath.row])
-    }
-
-}
-
-/*
-class MyViewController: UIViewController {
-
-    override func viewDidLoad() {
-        navigationController?.toolbarHidden = false
-        toolbarItems = [
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "S", style: .Plain, target: self, action: #selector(MyViewController.silver)),
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "G", style: .Plain, target: self, action: #selector(MyViewController.gold)),
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "SG", style: .Plain, target: self, action: #selector(MyViewController.spaceGrey)),
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: "RG", style: .Plain, target: self, action: #selector(MyViewController.roseGold)),
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        ]
-    }
-
-    func silver() {
-
-    }
-
-    func gold() {
-
-    }
-
-    func spaceGrey() {
-
-    }
-
-    func roseGold() {
-
-    }
-
-}
-*/
-
 struct Album {
     let name: String
 }
@@ -106,16 +23,15 @@ let artists : [Artist] = [
     Artist(name: "Simeon Ten Holt", additionalInformation: "Bla bla", albums: [])
 ]
 
-let chooseArtist: ViewController<[Artist], Artist> = tableViewController { cell, artist in
+let chooseArtist: ViewController<[Artist], Artist> = TableViewController.tableViewController { cell, artist in
     cell.textLabel!.text = artist.name
     return cell
 }
 
-let chooseAlbum: ViewController<[Album], Album> = tableViewController { cell, album in
+let chooseAlbum: ViewController<[Album], Album> = TableViewController.tableViewController { cell, album in
     cell.textLabel?.text = album.name
     return cell
 }
-
 
 class ColorViewController: UIViewController {
 
@@ -168,20 +84,19 @@ extension Color: CustomStringConvertible {
 
 let colors: [Color] = [.Silver(string: "Foobar"), .SpaceGrey(int: 42), .Gold, .RoseGold]
 
-let chooseColor: ViewController<[Color], Color> = tableViewController { cell, color in
+let chooseColor: ViewController<[Color], Color> = TableViewController.tableViewController { cell, color in
     cell.textLabel?.text = color.description
     return cell
 }
 
 let color2Other: ViewController<Color, String> = ViewController { (color: Color, callback: String -> Void) -> UIViewController in
     switch color {
-        case let .Silver(string): return chooseColor.run(colors, finish: { print($0) })
-        case let .SpaceGrey(int): return chooseArtist.run(artists, finish: { print($0) })
+        case let .Silver(string): return chooseColor.run(colors)
+        case let .SpaceGrey(int): return chooseArtist.run(artists)
         case .Gold: return ColorViewController(color: color)
         case .RoseGold: return ColorViewController(color: color)
     }
 }
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -197,8 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //.bind(chooseAlbum)
             //.run(artists, finish: { print("Selected \($0.name)")})
             .bind(color2Other)
-            //.run(colors, finish: { print("Selected \($0.description)")})
-            .run(colors, finish: { print($0) })
+            .run(colors)
 
         window?.makeKeyAndVisible()
 
