@@ -17,7 +17,7 @@ extension Router {
     init(rootViewController: Screen<A, B>) {
         create = { initial, callback in
             let navController = UINavigationController()
-            let rootController = rootViewController.create(initial, { callback($0, navController) } )
+            let rootController = rootViewController.create(initial, { callback($0, navController) })
             navController.viewControllers = [rootController]
             return navController
         }
