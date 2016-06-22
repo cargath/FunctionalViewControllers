@@ -23,13 +23,25 @@ extension Router {
         }
     }
 
-    func bind<C>(other: Screen<B, C>) -> Router<A, C> {
+    func push<C>(other: Screen<B, C>) -> Router<A, C> {
         return Router<A, C> { x, callback in
             let nc = self.create(x, { b, nc in
                 let rvc = other.create(b, { c in
                     callback(c, nc)
                 })
                 nc.pushViewController(rvc, animated: true)
+            })
+            return nc
+        }
+    }
+
+    func modal<C>(other: Screen<B, C>) -> Router<A, C> {
+        return Router<A, C> { x, callback in
+            let nc = self.create(x, { b, nc in
+                let rvc = other.create(b, { c in
+                    callback(c, nc)
+                })
+                nc.presentViewController(UINavigationController(rootViewController: rvc), animated: true, completion: nil)//pushViewController(rvc, animated: true)
             })
             return nc
         }

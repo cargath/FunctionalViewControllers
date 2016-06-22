@@ -111,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //.map({ $0.albums })
             //.bind(chooseAlbum)
             //.run(artists, finish: { print("Selected \($0.name)")})
-            .bind(color2Other)
+            .push(color2Other)
             .run(colors)
 
         window?.makeKeyAndVisible()
