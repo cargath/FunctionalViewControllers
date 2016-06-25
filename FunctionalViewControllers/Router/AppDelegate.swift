@@ -17,12 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Override point for customization after application launch.
 
-        let colorViewController = ColorViewController()
-            .push(.spaceGrey, route: { SizeViewController(color: $0)
-                .push(.gb32, route: { _ in ColorViewController() })
-                .push(.gb128, route: { _ in ColorViewController() })
-            })
-            .push(.roseGold, route: { SizeViewController(color: $0) })
+        let colorViewController = ColorViewController().push {
+            SizeViewController(color: $0).push { size -> UIViewController in
+                switch size {
+                    case .gb32:
+                        return ColorViewController()
+                    default:
+                        return SizeViewController(color: .silver)
+                }
+            }
+        }
 
         window = UIWindow(frame: UIScreen.main().bounds)
         window?.rootViewController = UINavigationController(rootViewController: colorViewController)

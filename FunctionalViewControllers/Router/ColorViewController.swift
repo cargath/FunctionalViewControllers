@@ -50,7 +50,7 @@ class ColorViewController: RoutableViewController<Color> {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if !finish(Color(rawValue: (indexPath as NSIndexPath).row)!, output: Color(rawValue: (indexPath as NSIndexPath).row)!) {
+        if !finish(Color(rawValue: (indexPath as NSIndexPath).row)!) {
             print("\(Color(rawValue: (indexPath as NSIndexPath).row)!)")
         }
     }

@@ -40,7 +40,7 @@ class SizeViewController: RoutableViewController<Size> {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if !finish(Size(rawValue: (indexPath as NSIndexPath).row)!, output: Size(rawValue: (indexPath as NSIndexPath).row)!) {
+        if !finish(Size(rawValue: (indexPath as NSIndexPath).row)!) {
             print("\(Size(rawValue: (indexPath as NSIndexPath).row)!)")
         }
     }

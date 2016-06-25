@@ -18,20 +18,20 @@ public class RoutableViewController<OutputType: Hashable>: UITableViewController
     // Explains why it doesn't complain about 'Self or associated type requirements'.
     // var routes: [OutputType: (OutputType) -> RoutableViewController] = [:]
 
-    var routes: [OutputType: (OutputType) -> UIViewController] = [:]
+    var route: ((OutputType) -> UIViewController)?
 
     init() {
         super.init(nibName: nil, bundle: nil)
     }
 
-    public func push<NextOutputType: Hashable>(_ key: OutputType, route: (OutputType) -> RoutableViewController<NextOutputType>) -> Self {
-        routes[key] = route
+    public func push(_ route: (OutputType) -> UIViewController) -> Self {
+        self.route = route
         return self
     }
 
-    public func finish(_ key: OutputType, output: OutputType) -> Bool {
+    public func finish(_ output: OutputType) -> Bool {
         if let
-            route = routes[key],
+            route = self.route,
             navigationController = self.navigationController {
             navigationController.pushViewController(route(output), animated: true)
             return true
