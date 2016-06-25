@@ -10,49 +10,55 @@
 		355026AA1D1B3F5A008458F8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026A91D1B3F5A008458F8 /* TableViewController.swift */; };
 		355026AC1D1B4F50008458F8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026AB1D1B4F50008458F8 /* Screen.swift */; };
 		355026AE1D1B4F57008458F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026AD1D1B4F57008458F8 /* Router.swift */; };
+		355026B01D1D89AF008458F8 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026AF1D1D89AF008458F8 /* Routable.swift */; };
+		355026B81D1DA3F1008458F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026B71D1DA3F1008458F8 /* AppDelegate.swift */; };
+		355026BF1D1DA3F1008458F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355026BE1D1DA3F1008458F8 /* Assets.xcassets */; };
+		355026C21D1DA3F1008458F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355026C01D1DA3F1008458F8 /* LaunchScreen.storyboard */; };
+		355026C81D1DAFA9008458F8 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026C71D1DAFA9008458F8 /* Routable.swift */; };
+		355026CA1D1DB1D1008458F8 /* EnumUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026C91D1DB1D1008458F8 /* EnumUtilities.swift */; };
+		355026CC1D1DB2B7008458F8 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026CB1D1DB2B7008458F8 /* ColorViewController.swift */; };
+		355026CE1D1DB829008458F8 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026CD1D1DB829008458F8 /* RoutableViewController.swift */; };
+		355026D01D1DBFAF008458F8 /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355026CF1D1DBFAF008458F8 /* SizeViewController.swift */; };
 		35BA41FD1D18801200548563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA41FC1D18801200548563 /* AppDelegate.swift */; };
 		35BA42041D18801200548563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BA42031D18801200548563 /* Assets.xcassets */; };
 		35BA42071D18801200548563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BA42051D18801200548563 /* LaunchScreen.storyboard */; };
-		35BA42121D18801200548563 /* FunctionalViewControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA42111D18801200548563 /* FunctionalViewControllersTests.swift */; };
 		35BA421D1D18803000548563 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA421C1D18803000548563 /* Result.swift */; };
 		35BA421F1D18803800548563 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA421E1D18803800548563 /* Promise.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		35BA420E1D18801200548563 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 35BA41F11D18801200548563 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 35BA41F81D18801200548563;
-			remoteInfo = FunctionalViewControllers;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		355026A91D1B3F5A008458F8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		355026AB1D1B4F50008458F8 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		355026AD1D1B4F57008458F8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		355026AF1D1D89AF008458F8 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		355026B51D1DA3F1008458F8 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		355026B71D1DA3F1008458F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		355026BE1D1DA3F1008458F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		355026C11D1DA3F1008458F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		355026C31D1DA3F1008458F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355026C71D1DAFA9008458F8 /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		355026C91D1DB1D1008458F8 /* EnumUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumUtilities.swift; sourceTree = "<group>"; };
+		355026CB1D1DB2B7008458F8 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		355026CD1D1DB829008458F8 /* RoutableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
+		355026CF1D1DBFAF008458F8 /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		35BA41F91D18801200548563 /* FunctionalViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunctionalViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BA41FC1D18801200548563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35BA42031D18801200548563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35BA42061D18801200548563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35BA42081D18801200548563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35BA420D1D18801200548563 /* FunctionalViewControllersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalViewControllersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35BA42111D18801200548563 /* FunctionalViewControllersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalViewControllersTests.swift; sourceTree = "<group>"; };
-		35BA42131D18801200548563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BA421C1D18803000548563 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		35BA421E1D18803800548563 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		35BA41F61D18801200548563 /* Frameworks */ = {
+		355026B21D1DA3F1008458F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35BA420A1D18801200548563 /* Frameworks */ = {
+		35BA41F61D18801200548563 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,11 +68,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		355026B61D1DA3F1008458F8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				355026BE1D1DA3F1008458F8 /* Assets.xcassets */,
+				355026C01D1DA3F1008458F8 /* LaunchScreen.storyboard */,
+				355026C31D1DA3F1008458F8 /* Info.plist */,
+				355026B71D1DA3F1008458F8 /* AppDelegate.swift */,
+				355026C91D1DB1D1008458F8 /* EnumUtilities.swift */,
+				355026C71D1DAFA9008458F8 /* Routable.swift */,
+				355026CD1D1DB829008458F8 /* RoutableViewController.swift */,
+				355026CB1D1DB2B7008458F8 /* ColorViewController.swift */,
+				355026CF1D1DBFAF008458F8 /* SizeViewController.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		35BA41F01D18801200548563 = {
 			isa = PBXGroup;
 			children = (
 				35BA41FB1D18801200548563 /* FunctionalViewControllers */,
-				35BA42101D18801200548563 /* FunctionalViewControllersTests */,
+				355026B61D1DA3F1008458F8 /* Router */,
 				35BA41FA1D18801200548563 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				35BA41F91D18801200548563 /* FunctionalViewControllers.app */,
-				35BA420D1D18801200548563 /* FunctionalViewControllersTests.xctest */,
+				355026B51D1DA3F1008458F8 /* Router.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +111,7 @@
 				355026AB1D1B4F50008458F8 /* Screen.swift */,
 				355026AD1D1B4F57008458F8 /* Router.swift */,
 				355026A91D1B3F5A008458F8 /* TableViewController.swift */,
+				355026AF1D1D89AF008458F8 /* Routable.swift */,
 				35BA41FC1D18801200548563 /* AppDelegate.swift */,
 				35BA421C1D18803000548563 /* Result.swift */,
 				35BA421E1D18803800548563 /* Promise.swift */,
@@ -96,18 +119,26 @@
 			path = FunctionalViewControllers;
 			sourceTree = "<group>";
 		};
-		35BA42101D18801200548563 /* FunctionalViewControllersTests */ = {
-			isa = PBXGroup;
-			children = (
-				35BA42111D18801200548563 /* FunctionalViewControllersTests.swift */,
-				35BA42131D18801200548563 /* Info.plist */,
-			);
-			path = FunctionalViewControllersTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		355026B41D1DA3F1008458F8 /* Router */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355026C41D1DA3F1008458F8 /* Build configuration list for PBXNativeTarget "Router" */;
+			buildPhases = (
+				355026B11D1DA3F1008458F8 /* Sources */,
+				355026B21D1DA3F1008458F8 /* Frameworks */,
+				355026B31D1DA3F1008458F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Router;
+			productName = Router;
+			productReference = 355026B51D1DA3F1008458F8 /* Router.app */;
+			productType = "com.apple.product-type.application";
+		};
 		35BA41F81D18801200548563 /* FunctionalViewControllers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35BA42161D18801200548563 /* Build configuration list for PBXNativeTarget "FunctionalViewControllers" */;
@@ -125,24 +156,6 @@
 			productReference = 35BA41F91D18801200548563 /* FunctionalViewControllers.app */;
 			productType = "com.apple.product-type.application";
 		};
-		35BA420C1D18801200548563 /* FunctionalViewControllersTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 35BA42191D18801200548563 /* Build configuration list for PBXNativeTarget "FunctionalViewControllersTests" */;
-			buildPhases = (
-				35BA42091D18801200548563 /* Sources */,
-				35BA420A1D18801200548563 /* Frameworks */,
-				35BA420B1D18801200548563 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				35BA420F1D18801200548563 /* PBXTargetDependency */,
-			);
-			name = FunctionalViewControllersTests;
-			productName = FunctionalViewControllersTests;
-			productReference = 35BA420D1D18801200548563 /* FunctionalViewControllersTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,12 +166,12 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = cargath;
 				TargetAttributes = {
+					355026B41D1DA3F1008458F8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+					};
 					35BA41F81D18801200548563 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					35BA420C1D18801200548563 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 35BA41F81D18801200548563;
 					};
 				};
 			};
@@ -176,12 +189,21 @@
 			projectRoot = "";
 			targets = (
 				35BA41F81D18801200548563 /* FunctionalViewControllers */,
-				35BA420C1D18801200548563 /* FunctionalViewControllersTests */,
+				355026B41D1DA3F1008458F8 /* Router */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		355026B31D1DA3F1008458F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355026C21D1DA3F1008458F8 /* LaunchScreen.storyboard in Resources */,
+				355026BF1D1DA3F1008458F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35BA41F71D18801200548563 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,21 +213,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35BA420B1D18801200548563 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		355026B11D1DA3F1008458F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355026CE1D1DB829008458F8 /* RoutableViewController.swift in Sources */,
+				355026D01D1DBFAF008458F8 /* SizeViewController.swift in Sources */,
+				355026C81D1DAFA9008458F8 /* Routable.swift in Sources */,
+				355026B81D1DA3F1008458F8 /* AppDelegate.swift in Sources */,
+				355026CC1D1DB2B7008458F8 /* ColorViewController.swift in Sources */,
+				355026CA1D1DB1D1008458F8 /* EnumUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35BA41F51D18801200548563 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				35BA421D1D18803000548563 /* Result.swift in Sources */,
+				355026B01D1D89AF008458F8 /* Routable.swift in Sources */,
 				35BA41FD1D18801200548563 /* AppDelegate.swift in Sources */,
 				355026AE1D1B4F57008458F8 /* Router.swift in Sources */,
 				355026AA1D1B3F5A008458F8 /* TableViewController.swift in Sources */,
@@ -214,25 +243,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35BA42091D18801200548563 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35BA42121D18801200548563 /* FunctionalViewControllersTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		35BA420F1D18801200548563 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 35BA41F81D18801200548563 /* FunctionalViewControllers */;
-			targetProxy = 35BA420E1D18801200548563 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		355026C01D1DA3F1008458F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355026C11D1DA3F1008458F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		35BA42051D18801200548563 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -244,6 +265,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		355026C51D1DA3F1008458F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Router/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.Router;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		355026C61D1DA3F1008458F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Router/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.Router;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		35BA42141D18801200548563 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,33 +396,18 @@
 			};
 			name = Release;
 		};
-		35BA421A1D18801200548563 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FunctionalViewControllersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.FunctionalViewControllersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunctionalViewControllers.app/FunctionalViewControllers";
-			};
-			name = Debug;
-		};
-		35BA421B1D18801200548563 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = FunctionalViewControllersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.FunctionalViewControllersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunctionalViewControllers.app/FunctionalViewControllers";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		355026C41D1DA3F1008458F8 /* Build configuration list for PBXNativeTarget "Router" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355026C51D1DA3F1008458F8 /* Debug */,
+				355026C61D1DA3F1008458F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		35BA41F41D18801200548563 /* Build configuration list for PBXProject "FunctionalViewControllers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -392,15 +422,6 @@
 			buildConfigurations = (
 				35BA42171D18801200548563 /* Debug */,
 				35BA42181D18801200548563 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		35BA42191D18801200548563 /* Build configuration list for PBXNativeTarget "FunctionalViewControllersTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				35BA421A1D18801200548563 /* Debug */,
-				35BA421B1D18801200548563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
